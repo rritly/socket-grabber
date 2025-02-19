@@ -1,0 +1,60 @@
+CONTROLLER:
+    ip: 192.168.56.51
+    port_read: 2000
+    port_write: 2001
+    db_READ: |
+        0.0 top.autoEn BOOL
+        1.0 top.status USINT
+        2.0 top.distanceL1 DINT
+        6.0 top.distanceL2 DINT
+        10.0 top.speed DINT
+        14.0 top.currDistance DINT
+        18.0 top.currMoisture REAL
+        22.0 top.arrayMoisture ARRAY_OF_REAL 100
+        422.0 bottom.autoEn BOOL
+        423.0 bottom.status USINT
+        424.0 bottom.distanceL1 DINT
+        428.0 bottom.distanceL2 DINT
+        432.0 bottom.speed DINT
+        436.0 bottom.currDistance DINT
+        440.0 bottom.currMoisture REAL
+        444.0 bottom.arrayMoisture ARRAY_OF_REAL 100
+        844.0 copyDbWrite.airBlower BOOL
+        846.0 copyDbWrite.top.jogForward BOOL
+        846.1 copyDbWrite.top.jogBackward BOOL
+        848.0 copyDbWrite.top.width DINT
+        852.0 copyDbWrite.top.delay DINT
+        856.0 copyDbWrite.top.speed DINT
+        860.0 copyDbWrite.top.speedJog DINT
+        864.0 copyDbWrite.top.speedInitia DINT
+        868.0 copyDbWrite.top.pulsesPerMeter DINT
+        872.0 copyDbWrite.top.offsetCenter DINT
+        876.0 copyDbWrite.bottom.jogForward BOOL
+        876.1 copyDbWrite.bottom.jogBackward BOOL
+        878.0 copyDbWrite.bottom.width DINT
+        882.0 copyDbWrite.bottom.delay DINT
+        886.0 copyDbWrite.bottom.speed DINT
+        890.0 copyDbWrite.bottom.speedJog DINT
+        894.0 copyDbWrite.bottom.speedInitia DINT
+        898.0 copyDbWrite.bottom.pulsesPerMeter DINT
+        902.0 copyDbWrite.bottom.offsetCenter DINT
+    db_WRITE: |
+        0.0 airBlower BOOL
+        2.0 top.jogForward BOOL
+        2.1 top.jogBackward BOOL
+        4.0 top.width DINT
+        8.0 top.delay DINT
+        12.0 top.speed DINT
+        16.0 top.speedJog DINT
+        20.0 top.speedInitia DINT
+        24.0 top.pulsesPerMeter DINT
+        28.0 top.offsetCenter DINT
+        32.0 bottom.jogForward BOOL
+        32.1 bottom.jogBackward BOOL
+        34.0 bottom.width DINT
+        38.0 bottom.delay DINT
+        42.0 bottom.speed DINT
+        46.0 bottom.speedJog DINT
+        50.0 bottom.speedInitia DINT
+        54.0 bottom.pulsesPerMeter DINT
+        58.0 bottom.offsetCenter DINT

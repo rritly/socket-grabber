@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "socket-grabber"
+version = "1.0.1"
+description = ""
+authors = ["Roman Istomin <ra.istomin@yandex.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bitstring = "^4.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+mypy = "^1.15.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

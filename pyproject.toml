@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "socket-grabber"
-version = "1.0.3"
+version = "1.0.4"
 description = ""
-authors = ["Roman Istomin <ra.istomin@yandex.com>"]
+authors = ["Roman Istomin <ra.istomin@yandex.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

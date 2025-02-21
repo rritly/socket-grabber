@@ -259,8 +259,7 @@ class ControllerHandler:
             msg_bits = "".join(self.lookup[byte] for byte in msg)
             return self.read_parser.read_from_plc(msg_bits)
         except (ConnectionResetError, BrokenPipeError) as e:
-            raise ConnectionError(
-                f"Потеря коннекта {self.device_ip}:{self.port_read}") from e
+            raise ConnectionError(f"Потеря коннекта {self.device_ip}:{self.port_read}") from e
         except (ConnectionRefusedError, OSError) as e:
             raise OSError(f"Сервер {self.device_ip}:{self.port_read} недоступен") from e
 

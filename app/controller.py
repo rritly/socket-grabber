@@ -261,7 +261,7 @@ class ControllerHandler:
         except (ConnectionResetError, BrokenPipeError) as e:
             raise ConnectionError(f"Потеря коннекта {self.device_ip}:{self.port_read}") from e
         except (ConnectionRefusedError, OSError) as e:
-            raise OSError(f"Сервер {self.device_ip}:{self.port_read} недоступен") from e
+            raise ConnectionError(f"Сервер {self.device_ip}:{self.port_read} недоступен") from e
 
     async def transmit(self, in_dict: dict) -> None:
         try:
@@ -273,5 +273,5 @@ class ControllerHandler:
         except (ConnectionResetError, BrokenPipeError) as e:
             raise ConnectionError(f"Потеря коннекта {self.device_ip}:{self.port_write}") from e
         except (ConnectionRefusedError, OSError) as e:
-            raise OSError(f"Сервер {self.device_ip}:{self.port_write} недоступен",) from e
+            raise OConnectionError(f"Сервер {self.device_ip}:{self.port_write} недоступен",) from e
 

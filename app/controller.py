@@ -273,5 +273,5 @@ class ControllerHandler:
         except (ConnectionResetError, BrokenPipeError) as e:
             raise ConnectionError(f"Потеря коннекта {self.device_ip}:{self.port_write}") from e
         except (ConnectionRefusedError, OSError) as e:
-            raise OConnectionError(f"Сервер {self.device_ip}:{self.port_write} недоступен",) from e
+            raise ConnectionError(f"Сервер {self.device_ip}:{self.port_write} недоступен",) from e
 
